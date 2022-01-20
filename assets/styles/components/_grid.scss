@@ -8,6 +8,10 @@
     display: grid;
 }
 
+.grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
 .grid-cols-12 {
     grid-template-columns: repeat(12, 1fr);
 }

@@ -1,6 +1,6 @@
+import React, { useState } from 'react';
 import Link from 'next/link';
-import React from 'react';
-
+import { useEventListener } from 'app/hooks'
 
 
 
@@ -10,6 +10,13 @@ import React from 'react';
  * Layout header Component
  */
 export default function Header() {
+
+    useEventListener('scroll', (e) => {
+        if (window.scrollY > 100) document.body.classList.add('scroll')
+        else document.body.classList.remove('scroll')
+    })
+
+
     const linksLeft = [{
         name: 'Home',
         href: '/',
@@ -32,7 +39,7 @@ export default function Header() {
     }]
 
     return (
-        <header className="header">
+        <header className={`header`}>
             <nav className="header-nav">
                 <ul className="header-nav-menu left">
                     {linksLeft.map((link, index) => (

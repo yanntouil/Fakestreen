@@ -8,11 +8,12 @@
     background-color: rgba($dark , .75);
     &-nav {
         display: flex; justify-content: space-between;
-        max-width: 1536px;
-        width: max-content;
         margin: 0 auto;
-        gap: 2rem;
         height: 6rem;
+        transition: height 300ms ease-in-out;
+        body.scroll & {
+            height: 4rem;
+        }
         &-menu {
             display: flex; align-items: center;
             flex-grow: 1;
@@ -20,9 +21,11 @@
             font-size: 1.2rem;
             &.left {
                 justify-content: flex-end;
+                padding-right: 2rem;
             }
             &.right {
                 justify-content: flex-start;
+                padding-left: 2rem;
             }
             &-link {
                 text-transform: uppercase;
@@ -42,6 +45,11 @@
         &-logo {
             display: flex; justify-content: center; align-items: center;
             font-size: 3rem;
+            width: 12rem;
+            transition: all 300ms ease-in-out;
+            body.scroll & {
+                font-size: 2rem;
+            }
         }
     }
 }

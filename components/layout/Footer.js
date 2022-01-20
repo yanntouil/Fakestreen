@@ -107,8 +107,10 @@ export default function Footer() {
                         target="_blank" 
                         rel="noopener noreferrer"
                     >
-                        <MapMarkerSvg />
-                        Show on map
+                        <span className="icon">
+                            <MapMarkerSvg />
+                        </span>
+                        <span className="text">Show on map</span>
                     </a>
                 </div>
             </div>

@@ -3,11 +3,13 @@ import store from 'app/reducers/store'
 import 'assets/styles/app.scss'
 import Layout from 'components/layout/Layout'
 
+
 /**
  * Application component
  */
 export default function Application({ Component, pageProps, router }) {
-  
+
+
     /**
      * Render
      */
