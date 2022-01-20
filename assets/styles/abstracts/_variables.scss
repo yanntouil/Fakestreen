@@ -1,0 +1,30 @@
+/**
+ * Variables
+ */
+
+
+
+
+// Breakpoint
+
+ $breakpoints: (
+    'sm':   640px,
+    'md':   768px,
+    'lg':   1024px,
+    'xl':   1280px,
+    '2xl':  1536px
+    ) !default;
+
+
+// Colors
+$dark: #000000;
+$light: #ffffff;
+
+$primary-500: #f59e0b;
+
+
+// Scrollbar
+$scrollbar-color-1: #000000;
+$scrollbar-color-2: #222222;
+$scrollbar-color-3: #333333;
+$scrollbar-width: 0.75rem;

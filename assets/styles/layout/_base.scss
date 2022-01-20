@@ -1,0 +1,36 @@
+/**
+ * Base
+ */
+
+
+
+
+
+
+body {
+    background-color: $dark;
+    color: $light;
+    font-family: 'Open Sans', sans-serif;
+
+    scrollbar-width: thin;
+    scrollbar-color: $scrollbar-color-1 $scrollbar-color-3;
+    &::-webkit-scrollbar {
+        width: $scrollbar-width;
+        height: $scrollbar-width;
+    }
+    &::-webkit-scrollbar-track {
+        background: $scrollbar-color-2;
+    }
+    &::-webkit-scrollbar-thumb {
+        border: 1px solid  $scrollbar-color-1;
+        background:  $scrollbar-color-3;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        border-width: 1px;
+        background:  $scrollbar-color-3;
+    }
+}
+
+.hidden {
+    display: none;
+}

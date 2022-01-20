@@ -1,6 +1,7 @@
 import { Provider } from 'react-redux'
 import store from 'app/reducers/store'
 import 'assets/styles/app.scss'
+import Layout from 'components/layout/Layout'
 
 /**
  * Application component
@@ -12,7 +13,9 @@ export default function Application({ Component, pageProps, router }) {
      */
     return (
         <Provider store={store}>
-            <Component {...pageProps} key={router.route} />
+            <Layout>
+                <Component {...pageProps} key={router.route} />
+            </Layout>
         </Provider>
     )
 }

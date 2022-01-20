@@ -1,0 +1,201 @@
+/**
+ * Footer
+ */
+@use 'sass:color';
+.footer {
+    padding: 4rem 0;
+    &-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    &-title {
+        font-size: 1.2rem;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+    &-newsletter {
+        display: flex; flex-direction: column; align-items: center;
+        gap: 2rem;
+        &-form {
+            display: flex; flex-wrap: wrap;
+            gap: 1rem;
+            .form-text {
+                width: 60%; height: 3rem;
+                padding: .5rem .5rem;
+                border-radius: .5rem;
+                background: lighten($dark, 10%);
+                border: 2px $primary-500 solid;
+                text-transform: uppercase;
+                transition: all 500ms ease-in-out;
+                outline: none;
+                &::placeholder {
+                    color: $primary-500;
+                    transition: color 500ms ease-in-out;
+                }
+                &:hover, &:focus {
+                    background-color: $dark;
+                    color: $primary-500;
+                    &::placeholder {
+                        color: $light;
+                    }
+                }
+            }
+            .form-submit {
+                flex-grow: 1;
+                padding: .5rem .5rem;
+                border-radius: .5rem;
+                background-color: $primary-500;
+                border: 2px $primary-500 solid;
+                text-align: center;
+                text-transform: uppercase;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 500ms ease-in-out;
+                &:hover {
+                    background-color: $dark;
+                    color: $primary-500;
+                }
+            }
+            .form-label {
+                display: flex; align-items: center;
+                gap: 1rem;
+                cursor: pointer;
+                &:not(.active):hover .form-checkbox {
+                    animation: footer-newsletter-shake 500ms ease-in-out;
+                }
+            }
+            .form-checkbox {
+                display: flex; justify-content: center; align-items: center;
+                width: 2rem; height: 2rem;
+                border-radius: .5rem;
+                border: 2px $primary-500 solid;
+                svg {
+                    width: 1rem; height: 1rem;
+                    animation: footer-newsletter-check 300ms ease-in-out;
+                }
+            }
+        }
+    }
+
+    &-follow {
+        display: flex; flex-direction: column; align-items: center;
+        gap: 2rem;
+        &-social {
+            display: flex; justify-content: center;
+            gap: 2rem;
+            &-link {
+                position: relative;
+                display: flex; justify-content: center; align-items: center;
+                width: 4rem; height: 4rem;
+                border-radius: .5rem;
+                overflow: hidden;
+                border: 2px $light solid;
+                transition: all 500ms ease-in-out;
+                &::before {
+                    content: '';
+                    position: absolute; top: -5%; left: -5%;
+                    border-radius: .5rem;
+                    width: 0; height: 0;
+                    background-color: $primary-500;
+                    transition: all 500ms ease-in-out;
+                }
+                &.facebook::before {
+                    background-color: #4267B2;
+                }
+                &.twitter::before {
+                    background-color: #1DA1F2;
+                }
+                &.instagram::before {
+                    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+                }
+                &:hover::before {
+                    width: 110%; height: 110%;
+                }
+                svg {
+                    position: relative;
+                    width: 2rem; height: 2rem;
+                }
+            }
+            li a:hover {
+                transform: rotate(-5deg) scale(1.1);
+                margin-left: 1rem;
+                margin-right: 1rem;
+            }
+            li:first-child a:hover, li:last-child a:hover {
+                transform: rotate(5deg) scale(1.1);
+            }
+            li:first-child a:hover {
+                margin-right: 1rem;
+            }
+            li:first-child a:hover {
+                margin-left: 1rem;
+            }
+        }
+    }
+
+    &-findus {
+        display: flex; flex-direction: column; align-items: center;
+        gap: 2rem;
+        &-link {
+            display: flex; flex-direction: column; align-items: center;
+            svg {
+                width: 3rem; height: 3rem;
+                margin: 1rem;
+            }
+        }
+    }
+
+    &-logo {
+        display: flex; justify-content: center;
+        padding: 6rem 2rem 8rem;
+        font-size: 3rem;
+    }
+
+    &-bottom-links {
+        display: flex; justify-content: center;
+        gap: 1rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        ul {
+            display: flex; align-items: center;
+            gap: 1rem;
+            & li:first-child {
+                color: $primary-500;
+            }
+        }
+        a:after {
+            content: '';
+            display: block;
+            border-bottom: 2px solid $primary-500;
+            width: 0;
+            transition: width 300ms ease-in-out;
+        }
+        a:hover:after {
+            width: 100%;
+        }
+    }
+}
+
+@keyframes footer-newsletter-check {
+    0% {
+        transform: rotate(-90deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
+@keyframes footer-newsletter-shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+}

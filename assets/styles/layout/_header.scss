@@ -1,0 +1,56 @@
+/**
+ * Header
+ */
+
+
+.header {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 10;
+    background-color: rgba($dark , .75);
+    &-nav {
+        display: flex; justify-content: space-between;
+        max-width: 1536px;
+        width: max-content;
+        margin: 0 auto;
+        gap: 2rem;
+        height: 6rem;
+        &-menu {
+            display: flex; align-items: center;
+            flex-grow: 1;
+            gap: 3rem;
+            font-size: 1.2rem;
+            &.left {
+                justify-content: flex-end;
+            }
+            &.right {
+                justify-content: flex-start;
+            }
+            &-link {
+                text-transform: uppercase;
+                font-weight: 300;
+                &:after {
+                    content: '';
+                    display: block;
+                    border-bottom: 2px solid $primary-500;
+                    width: 0;
+                    transition: width 300ms ease-in-out;
+                }
+                &:hover:after {
+                    width: 100%;
+                }
+            }
+        }
+        &-logo {
+            display: flex; justify-content: center; align-items: center;
+            font-size: 3rem;
+        }
+    }
+}
+
+.fs-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 7;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+}
+
+
