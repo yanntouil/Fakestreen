@@ -15,8 +15,8 @@
     @include media-between('md', 'lg') {
         max-width: map-get($breakpoints, 'md');
     }
-    @include media-between('sm', 'md') {
-        max-width: map-get($breakpoints, 'sm');
-    }
+    // @include media-between('sm', 'md') {
+    //     max-width: map-get($breakpoints, 'sm');
+    // }
     margin: 0 auto;
 }

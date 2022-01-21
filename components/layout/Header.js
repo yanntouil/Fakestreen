@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { useEventListener } from 'app/hooks'
+import { useEventListener, useResponsive } from 'app/hooks'
 
+// Icons
+import CheeseburgerSvg from 'assets/images/icons/cheeseburger.svg'
+import LogoSvg from 'assets/images/logo.svg'
 
 
 
@@ -11,6 +14,8 @@ import { useEventListener } from 'app/hooks'
  */
 export default function Header() {
 
+    const media = useResponsive()
+    
     useEventListener('scroll', (e) => {
         if (window.scrollY > 100) document.body.classList.add('scroll')
         else document.body.classList.remove('scroll')
@@ -38,27 +43,14 @@ export default function Header() {
         href: '/',
     }]
 
+    /**
+     * Render
+     */
     return (
         <header className={`header`}>
             <nav className="header-nav">
                 <ul className="header-nav-menu left">
-                    {linksLeft.map((link, index) => (
-                        <li key={`header-nav-menu-link-${index}`}>
-                            <Link href={link.href}>
-                                <a className="header-nav-menu-link">
-                                    {link.name}
-                                </a>
-                            </Link>
-                        </li>
-                ))}
-                </ul>
-                <Link href="/">
-                    <a className="header-nav-logo">
-                        Logo
-                    </a>
-                </Link>
-                <ul className="header-nav-menu right">
-                    {linksRight.map((link, index) => (
+                    {media.min('lg') && linksLeft.map((link, index) => (
                         <li key={`header-nav-menu-link-${index}`}>
                             <Link href={link.href}>
                                 <a className="header-nav-menu-link">
@@ -67,6 +59,29 @@ export default function Header() {
                             </Link>
                         </li>
                     ))}
+                </ul>
+                <Link href="/">
+                    <a className="header-nav-logo">
+                        <LogoSvg />
+                    </a>
+                </Link>
+                <ul className="header-nav-menu right">
+                    {media.min('lg') ? 
+                    linksRight.map((link, index) => (
+                        <li key={`header-nav-menu-link-${index}`}>
+                            <Link href={link.href}>
+                                <a className="header-nav-menu-link">
+                                    {link.name}
+                                </a>
+                            </Link>
+                        </li>
+                    )) : (
+                        <li>
+                            <button className="header-nav-menu-collapse">
+                                <CheeseburgerSvg />
+                            </button>
+                        </li>
+                    )}
                 </ul>
             </nav>
         </header>

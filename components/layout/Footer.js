@@ -9,6 +9,7 @@ import MapMarkerSvg from 'assets/images/icons/map-marker-alt.svg'
 import FacebookSvg from 'assets/images/icons/facebook-f.svg'
 import InstagramSvg from 'assets/images/icons/instagram.svg'
 import TwitterSvg from 'assets/images/icons/twitter.svg'
+import LogoRingSvg from 'assets/images/logo-ring.svg'
 
 /**
  * Layout footer Component
@@ -57,7 +58,7 @@ export default function Footer() {
                             className={`form-label${newsletterFD.consent ? ' active' : ''}`}
                         >
                             <input 
-                                className="hidden"
+                                className="form-checkbox-hidden"
                                 type="checkbox" 
                                 name="consent"
                                 id="newsletter-consent"
@@ -67,7 +68,7 @@ export default function Footer() {
                             <span className="form-checkbox" aria-hidden="true">
                                 {newsletterFD.consent && <CheckSvg />}
                             </span>
-                            Newsletter consent text
+                            <span className="form-checkbox-text">Newsletter consent text</span>
                         </label>
                     </form>
                 </section>
@@ -115,7 +116,7 @@ export default function Footer() {
                 </div>
             </div>
             <div className="footer-logo">
-                Logo
+                <LogoRingSvg />
             </div>
             <div className="footer-bottom-links">
                 <h2>Fakestreet Bar & Restaurant © 2022</h2>
