@@ -1,0 +1,27 @@
+/**
+ * Css variables
+ */
+
+@use 'sass:color';
+
+:root {
+
+    // Colors settings
+    --rgb-dark: 0, 0, 0;
+    --rgb-light: 255, 255, 255;
+    --rgb-primary-400: 250, 204, 21;
+    --rgb-primary-500: 234, 179, 8;
+    --rgb-primary-600: 202, 138, 4;
+    // Colors
+    --color-dark: rgba(var(--rgb-dark), 1);
+    --color-light: rgba(var(--rgb-light), 1);
+
+    --color-primary-400: rgba(var(--rgb-primary-400), 1);
+    --color-primary-500: rgba(var(--rgb-primary-500), 1);
+    --color-primary-600: rgba(var(--rgb-primary-600), 1);
+
+    // Z-index
+    --zi-header: 10;
+    --zi-mobile-menu: 11;
+
+}

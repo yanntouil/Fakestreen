@@ -15,8 +15,10 @@
 @import 'components/container';
 @import 'components/section';
 @import 'components/grid';
+@import 'components/fs-image';
 
 // Layout
+@import 'layout/variables';
 @import 'layout/base';
 @import 'layout/header';
 @import 'layout/main';

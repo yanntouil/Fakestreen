@@ -5,6 +5,14 @@
 const config = {
     sitename: 'Fakestreet',
     siteurl: 'https://fakestreet.ourway.io',
+    menu: [
+        {name: 'home', pathname: '/', side: 'left'},
+        {name: 'restaurant', pathname: '/restaurant', side: 'left'},
+        {name: 'bar', pathname: '/bar', side: 'left'},
+        {name: 'about', pathname: '/about-us', side: 'right'},
+        {name: 'takeaway', pathname: '/takeaway', side: 'right'},
+        {name: 'contact', pathname: '/contact-us', side: 'right'},
+    ],
     translation: {
         languages: ['fr', 'en'],// Languages available
         defaultLanguage: 'fr',// Default language

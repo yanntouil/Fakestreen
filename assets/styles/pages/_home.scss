@@ -11,7 +11,7 @@
     &-title {
         column-span: 2;
         padding-bottom: 1rem;
-        color: $primary-500;
+        color: var(--color-primary-500);
         font-size: 5rem;
         line-height: 5rem;
         font-weight: 800;
@@ -37,7 +37,7 @@
         font-size: 2rem;
         line-height: 3rem;
         font-weight: 500;
-        border-bottom: 4px solid $primary-500;
+        border-bottom: 4px solid var(--color-primary-500);
     }
 
     .content {

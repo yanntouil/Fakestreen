@@ -8,8 +8,8 @@
 
 
 body {
-    background-color: $dark;
-    color: $light;
+    background-color: var(--color-dark);
+    color: var(--color-light);
     font-family: 'Open Sans', sans-serif;
 
     scrollbar-width: thin;
@@ -29,6 +29,10 @@ body {
         border-width: 1px;
         background:  $scrollbar-color-3;
     }
+}
+
+#__next {
+    display: flex; flex-direction: column;
 }
 
 .hidden {

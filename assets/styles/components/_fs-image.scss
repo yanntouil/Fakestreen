@@ -1,0 +1,10 @@
+/**
+ * Full screen image
+ */
+
+.fs-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 7;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+}
