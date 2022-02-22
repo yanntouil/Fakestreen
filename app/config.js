@@ -5,6 +5,7 @@
 const config = {
     sitename: 'Fakestreet',
     siteurl: 'https://fakestreet.ourway.io',
+    monetaryUnit: '€',
     menu: [
         {name: 'home', pathname: '/', side: 'left'},
         {name: 'restaurant', pathname: '/restaurant', side: 'left'},
@@ -25,6 +26,10 @@ const config = {
     },
     google: {
         gMapApiKey : 'AIzaSyBotMFNB4V8H_llMYaSki0LeMNyOE7mSqo'
+    },
+    takeaway: {
+        orderDateMax: 31,// Order date max available on datepicker
+        serviceTimeStep: 15,// Time step in minnutes use in time picker
     },
 }
 export default config

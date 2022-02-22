@@ -17,7 +17,6 @@ export default function Home() {
                     priority={true}
                     alt={'image de test'} 
                 />
-
             </div>
 
             <section className="container section">

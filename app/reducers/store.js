@@ -2,6 +2,7 @@ import { createStore, combineReducers, compose, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
 import layoutReducer from './layout/reducer'
 import translationReducer from './translation/reducer'
+import takeawayReducer from './takeaway/reducer'
 
 
 /**
@@ -10,6 +11,7 @@ import translationReducer from './translation/reducer'
 const rootReducer = combineReducers({
     layoutReducer,
     translationReducer,
+    takeawayReducer,
 })
 
 /**

@@ -9,10 +9,13 @@ const translation = {
             'restaurant': "Restaurant",
             'bar': "Mango bar",
             'about': "About us",
-            'takeaway': "Take Away",
+            'takeaway': "Takeaway",
             'contact': "Contact us",
             'close-menu': "Close Menu",
-        }
+        },
+        'modal': {
+            'close': "Fermer",
+        },
     },
     en: {
     },

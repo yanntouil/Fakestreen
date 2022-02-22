@@ -5,6 +5,10 @@
 .fs-image {
     position: relative;
     width: 100%;
-    aspect-ratio: 16 / 7;
+    aspect-ratio: 16 / 8;
     clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+    &.fs-image-low {
+        aspect-ratio: 16 / 4;
+        clip-path: polygon(0 0, 100% 0, 100% 60%, 0% 100%);
+    }
 }

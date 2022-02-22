@@ -51,6 +51,12 @@ button, input {
     font-size: inherit;
     text-align: inherit;
 }
+button {
+    cursor: pointer;
+    &:disabled {
+        cursor: initial;
+    }
+}
 .sr-only {
 	border: 0 !important;
 	clip: rect(1px, 1px, 1px, 1px) !important;// Avertissements on CSS Validation

@@ -9,16 +9,23 @@
     // Colors settings
     --rgb-dark: 0, 0, 0;
     --rgb-light: 255, 255, 255;
+    --rgb-primary-200: 254, 240, 138;
+    --rgb-primary-300: 253, 224, 71;
     --rgb-primary-400: 250, 204, 21;
     --rgb-primary-500: 234, 179, 8;
     --rgb-primary-600: 202, 138, 4;
+    --rgb-secondary-500: 132, 204, 22;
     // Colors
     --color-dark: rgba(var(--rgb-dark), 1);
     --color-light: rgba(var(--rgb-light), 1);
 
+    --color-primary-200: rgba(var(--rgb-primary-200), 1);
+    --color-primary-300: rgba(var(--rgb-primary-300), 1);
     --color-primary-400: rgba(var(--rgb-primary-400), 1);
     --color-primary-500: rgba(var(--rgb-primary-500), 1);
     --color-primary-600: rgba(var(--rgb-primary-600), 1);
+
+    --color-secondary-500: rgba(var(--rgb-secondary-500), 1);
 
     // Z-index
     --zi-header: 10;

@@ -7,6 +7,13 @@
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
 
+// Libraries
+@import 'fa/fontawesome';
+@import 'fa/light';
+@import 'fa/solid';
+@import 'fa/regular';
+@import 'fa/brands';
+
 // Base
 @import 'base/reset';
 @import 'base/typography';
@@ -16,6 +23,10 @@
 @import 'components/section';
 @import 'components/grid';
 @import 'components/fs-image';
+@import 'components/modal';
+@import 'components/scrollbar';
+@import 'components/form';
+@import 'components/stepper';
 
 // Layout
 @import 'layout/variables';
@@ -26,3 +37,8 @@
 
 // Pages
 @import 'pages/home';
+@import 'pages/restaurant';
+@import 'pages/takeaway';
+
+
+
